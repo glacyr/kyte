@@ -16,7 +16,7 @@ application.
 
 ## Usage
 
-```ignore
+```rust
 use kyte::{Compose, Delta, Transform};
 
 let before = Delta::new().insert("Hello World".to_owned(), ());
@@ -33,6 +33,14 @@ assert_eq!(
         .compose(bob.transform(alice, false)),
 )
 ```
+
+## Acknowledgements
+
+This library largely implements Quill's delta
+[spec](https://github.com/quilljs/delta/) and uses some of their
+[test cases](https://github.com/quilljs/delta/tree/main/test/delta) for unit
+testing. Simply put, this library wouldn't exist without their amazing work on
+Quill.
 
 ## License
 
